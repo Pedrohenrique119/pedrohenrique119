@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Romântica</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f9f3f3;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 36px;
+            color: #ff4d4d;
+            margin-bottom: 20px;
+            z-index: 10;
+        }
+        .message {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+            z-index: 10;
+            position: relative;
+        }
+        .flower, .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            opacity: 0;
+        }
+        .flower {
+            background-size: cover;
+            animation: bloom 10s ease-in-out infinite;
+        }
+        @keyframes bloom {
+            0%, 100% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            20%, 80% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .flower:nth-child(1) {
+            background: url('https://cdn.pixabay.com/photo/2017/08/30/01/43/rose-2688590_960_720.png') no-repeat center center;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        .flower:nth-child(2) {
+            background: url('https://cdn.pixabay.com/photo/2016/04/26/11/20/sunflower-1351400_960_720.png') no-repeat center center;
+            top: 20%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+        .flower:nth-child(3) {
+            background: url('https://cdn.pixabay.com/photo/2016/08/29/00/12/flower-1632155_960_720.png') no-repeat center center;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        .flower:nth-child(4) {
+            background: url('https://cdn.pixabay.com/photo/2016/10/29/09/16/rose-1788668_960_720.jpg') no-repeat center center;
+            bottom: 10%;
+            right: 15%;
+            animation-delay: 6s;
+        }
+        .heart {
+            background: url('https://cdn.pixabay.com/photo/2016/09/15/20/14/heart-1678225_960_720.png') no-repeat center center;
+            background-size: cover;
+            animation: heart 10s ease-in-out infinite;
+        }
+        @keyframes heart {
+            0%, 100% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .heart:nth-child(5) {
+            width: 80px;
+            height: 80px;
+            top: 30%;
+            left: 30%;
+            animation-delay: 5s;
+        }
+        .heart:nth-child(6) {
+            width: 80px;
+            height: 80px;
+            top: 40%;
+            right: 20%;
+            animation-delay: 7s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Para a Minha Querida</h1>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="message">Você é a razão do meu sorriso. Amo você!</div>
+</body>
+</html>
